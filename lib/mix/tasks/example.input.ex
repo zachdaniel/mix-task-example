@@ -5,6 +5,7 @@ defmodule Mix.Tasks.Example.Input do
     count = Mix.shell().prompt("What should I count up to?: ")
 
     for i <- 0..String.to_integer(String.trim(count)) do
+      :timer.sleep(500)
       IO.puts(to_string(i))
     end
 
